@@ -74,5 +74,49 @@ console.log("23" - "10" -3); //10
 const year = "2022";
 console.log(year + 15);//202215
 console.log(Number(year) + 15);//2037
+//the strings are converted to numbers
+console.log("23" > "18"); //true
+let n = "1" + 1; //11
+n = n -1;
+console.log(n);//10
 
+//ARRAYS
+const characters = ["Chewbacca", "Khal Drogo", "Tommy Shelby", "Yoda"];
+const moreCharacters = ["Littlefinger", "Zaphod", "Totoro"];
+const allCharacters = characters.concat(moreCharacters);
+console.log(allCharacters);
+/* 
+  'Chewbacca',
+  'Khal Drogo',
+  'Tommy Shelby',
+  'Yoda',
+  'Littlefinger',
+  'Zaphod',
+  'Totoro'
+*/
+// add to array with push()
+allCharacters.push("Mononoke");
+// pop() removes the last element of an array.
+allCharacters.pop();
+// Shift (remove) the first element of the array:
+allCharacters.shift();
+// The unshift() method adds new elements to the beginning of an array.
+allCharacters.unshift("R2D2");
+console.log(allCharacters);
+/*
+  'R2D2',
+  'Khal Drogo',
+  'Tommy Shelby',
+  'Yoda',
+  'Littlefinger',
+  'Zaphod',
+  'Totoro'
+*/
+console.log(allCharacters.length);//7
 
+const calcAge = function(birthYear) {
+  return 2022 - birthYear;
+}
+const yearOfBirth = [1999, 2001, 2005];
+console.log(calcAge(yearOfBirth[0]));//23
+//console.log(calcAge(yearOfBirth));//NaN
