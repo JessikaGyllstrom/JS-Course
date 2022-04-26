@@ -6,7 +6,6 @@ let a = 999;
 let b = 400;
 let c = 50;
 console.log(a - b > a - c); 
-
 console.log(3 + 10 * 2);   // logs 23
 console.log(3 + (10 * 2)); // logs 23 because parentheses here are superfluous
 console.log((3 + 10) * 2); // logs 26 because the parentheses change the order
@@ -52,3 +51,23 @@ console.log("String with \n multiple \n lines");
 console.log(`String with
 multiple
 lines`);
+
+// TERNARY OPERATOR
+const age = 18;
+age >= 18 ? console.log("I can legally drive") : console.log("I can't legally drive");
+
+//Type coercion
+/*Type coercion is the automatic or implicit conversion of values from one data 
+type to another (such as strings to numbers). Type conversion is similar to type 
+coercion because they both convert values from one data type to another with one 
+key difference — type coercion is implicit whereas type conversion can be either 
+implicit or explicit. */
+const value1 = '5';
+const value2 = 9;
+let sum = value1 + value2;
+
+console.log(sum);//59
+sum = Number(value1) + value2; //14
+console.log(sum);//14
+
+
