@@ -120,3 +120,52 @@ const calcAge = function(birthYear) {
 const yearOfBirth = [1999, 2001, 2005];
 console.log(calcAge(yearOfBirth[0]));//23
 //console.log(calcAge(yearOfBirth));//NaN
+
+//OBJECTS
+const personObject = {
+  // property, assigned value "Darth"
+  firstName: "Darth", 
+  lastName: "Vader", 
+  birthYear: 1977,
+  job: "Dark Lord",
+  offspring:[ "Leia", "Luke"],
+
+  // calculateAge is a property in the object that has a function
+  calculateAge: function () {
+    // this points to the object
+    console.log(this);
+    //using personObject.birthYear is bad practise, use this keyword instead
+    //if you have to change values it makes it easier if you use "this"
+    return 2022 - this.birthYear;
+  },
+  getSummary: function () {
+    return `${this.firstName}${this.lastName} is ${this.calculateAge()} years old and his profession is: ${this.job}. He has the offsprings ${this.offspring}`;
+  }
+}
+/*
+const info = prompt("What do you know about Darth Vader?");
+console.log(personObject.job);//Dark Lord
+console.log(personObject.age);//81
+
+if(personObject[info]) {
+  console.log(personObject[info]);
+} else {
+  console.log("Sorry, could not be found");
+}
+*/
+//add props 
+personObject.location = "Death Squadron";
+console.log(personObject);
+/*
+  firstName: 'Darth',
+  lastName: 'Vader',
+  birthDay: 81,
+  job: 'Dark Lord',
+  offspring: [ 'Leia', 'Luke' ],
+  location: 'Death Squadron'
+*/
+console.log(personObject.offspring.length);
+console.log(personObject.offspring[0]);
+console.log(personObject.offspring[1]);
+console.log(personObject.calculateAge()); //45
+console.log(personObject.getSummary()); //45
