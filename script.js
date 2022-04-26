@@ -65,9 +65,14 @@ implicit or explicit. */
 const value1 = '5';
 const value2 = 9;
 let sum = value1 + value2;
-
 console.log(sum);//59
+//converts value1 to a number
 sum = Number(value1) + value2; //14
 console.log(sum);//14
+//conversion
+console.log("23" - "10" -3); //10
+const year = "2022";
+console.log(year + 15);//202215
+console.log(Number(year) + 15);//2037
 
 
